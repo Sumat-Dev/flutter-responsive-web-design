@@ -1,16 +1,11 @@
-# flutter_responsive_web_design
+# Flutter Responsive Web Design
 
-A new Flutter project.
 
-## Getting Started
+## Responsive
+| Desktop |
+|:--------:|
+| <img src="https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/desktop-design.png" alt="Desktop" style="height: auto; width:70%;"/> |
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Tablet | Mobile |
+|:--------:|:--------:|
+| <img src="https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/tablet-design.png" alt="Tablet" style="height: auto; width:50%;"/> | <img src="https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/mobile-design.png" alt="Mobile" style="height: auto; width:50%;"/>   |
