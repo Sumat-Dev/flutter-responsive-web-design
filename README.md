@@ -1,4 +1,5 @@
 # Flutter Responsive Web Design
+Example of a simple responsive website design
 
 
 ## Responsive
