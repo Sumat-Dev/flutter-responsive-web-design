@@ -13,68 +13,62 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ResponsiveBuilder(
-        mobileBuilder: (context, constraints) {
-          return Column(
-            children: [
-              _buildHeader(),
-              _buildContent1(),
-              _buildContent2(),
-              _buildContent3(),
-              _buildFooter(),
-            ],
-          );
-        },
-        tabletBuilder: (context, constraints) {
-          return Column(
-            children: [
-              _buildHeader(),
-              Expanded(
-                child: Row(
-                  children: [
-                    Flexible(
-                      child: _buildContent1(),
-                    ),
-                    Flexible(
-                      child: _buildContent2(),
-                    ),
-                  ],
-                ),
-              ),
-              Flexible(
-                child: _buildContent3(),
-              ),
-              _buildFooter(),
-            ],
-          );
-        },
-        desktopBuilder: (context, constraints) {
-          return Column(
-            children: [
-              _buildHeader(),
-              Expanded(
-                child: Row(
-                  children: [
-                    Flexible(
-                      child: _buildContent1(),
-                    ),
-                    Flexible(
-                      child: _buildContent2(),
-                    ),
-                    Flexible(
-                      child: _buildContent3(),
-                    )
-                  ],
-                ),
-              ),
-              _buildFooter(),
-            ],
-          );
-        },
+        mobileBuilder: _buildMobileLayout,
+        tabletBuilder: _buildTabletLayout,
+        desktopBuilder: _buildDesktopLayout,
       ),
     );
   }
 
-  _buildHeader() {
+  Widget _buildMobileLayout(BuildContext context, BoxConstraints constraints) {
+    return Column(
+      children: [
+        _buildHeader(),
+        _buildContent1(),
+        _buildContent2(),
+        _buildContent3(),
+        _buildFooter(),
+      ],
+    );
+  }
+
+  Widget _buildTabletLayout(BuildContext context, BoxConstraints constraints) {
+    return Column(
+      children: [
+        _buildHeader(),
+        Expanded(
+          child: Row(
+            children: [
+              _buildFlexibleContent(_buildContent1()),
+              _buildFlexibleContent(_buildContent2()),
+            ],
+          ),
+        ),
+        _buildFlexibleContent(_buildContent3()),
+        _buildFooter(),
+      ],
+    );
+  }
+
+  Widget _buildDesktopLayout(BuildContext context, BoxConstraints constraints) {
+    return Column(
+      children: [
+        _buildHeader(),
+        Expanded(
+          child: Row(
+            children: [
+              _buildFlexibleContent(_buildContent1()),
+              _buildFlexibleContent(_buildContent2()),
+              _buildFlexibleContent(_buildContent3()),
+            ],
+          ),
+        ),
+        _buildFooter(),
+      ],
+    );
+  }
+
+  Widget _buildHeader() {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1,
       color: Colors.blue,
@@ -88,52 +82,19 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  _buildContent1() {
-    return Expanded(
-      child: Container(
-        color: Colors.deepPurpleAccent,
-        alignment: Alignment.center,
-        child: const Text(
-          "Content 1",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
+  Widget _buildContent1() {
+    return _buildContentContainer("Content 1", Colors.deepPurpleAccent);
   }
 
-  _buildContent2() {
-    return Expanded(
-      child: Container(
-        color: Colors.orange,
-        alignment: Alignment.center,
-        child: const Text(
-          "Content 2",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
+  Widget _buildContent2() {
+    return _buildContentContainer("Content 2", Colors.orange);
   }
 
-  _buildContent3() {
-    return Expanded(
-      child: Container(
-        color: Colors.green,
-        alignment: Alignment.center,
-        child: const Text(
-          "Content 3",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
+  Widget _buildContent3() {
+    return _buildContentContainer("Content 3", Colors.green);
   }
 
-  _buildFooter() {
+  Widget _buildFooter() {
     return Container(
       height: MediaQuery.of(context).size.height * 0.1,
       color: Colors.pinkAccent,
@@ -145,5 +106,24 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
     );
+  }
+
+  Widget _buildContentContainer(String text, Color color) {
+    return Expanded(
+      child: Container(
+        color: color,
+        alignment: Alignment.center,
+        child: Text(
+          text,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFlexibleContent(Widget content) {
+    return Flexible(child: content);
   }
 }
