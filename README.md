@@ -47,9 +47,6 @@ flutter pub get
 flutter run
 ```
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/Sumat-Dev/flutter-responsive-web-design/issues).
-
 ## 📝 License
 This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
