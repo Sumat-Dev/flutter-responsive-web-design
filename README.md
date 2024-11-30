@@ -1,28 +1,18 @@
 # Flutter Responsive Web Design 🌐📱
 
-## 🚀 Overview
-This Flutter project demonstrates a comprehensive responsive web design approach, showcasing adaptive layouts across desktop, tablet, and mobile devices using ResponsiveBuilder.
+## 🚀 Introduction
+This Flutter project demonstrates a comprehensive responsive web design approach, showcasing adaptive layouts across desktop, tablet, and mobile devices using ResponsiveBuilder
 
 ## 🖥️ Design Previews
 
-### Desktop Layout
-![Desktop Design](https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/desktop-design.png)
+#### Desktop Layout
+<img src="https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/desktop-design.png" width="50%">
 
-### Tablet Layout
-![Tablet Design](https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/tablet-design.png)
+#### Tablet Layout
+<img src="https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/tablet-design.png" width="30%">
 
-### Mobile Layout
-![Mobile Design](https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/mobile-design.png)
-
-## 🚀 Key Features
-- Fully responsive design
-- Adaptive layouts for multiple screen sizes
-- Utilizes ResponsiveBuilder for seamless UI scaling
-- Clean and modular code structure
-
-## 📦 Technologies Used
-- Flutter
-- ResponsiveBuilder Widget
+#### Mobile Layout
+<img src="https://github.com/Sumat-Dev/flutter-responsive-web-design/blob/main/image/mobile-design.png" width="20%">
 
 ## 🛠️ Getting Started
 
@@ -32,17 +22,12 @@ This Flutter project demonstrates a comprehensive responsive web design approach
 git clone https://github.com/Sumat-Dev/flutter-responsive-web-design.git
 ```
 
-2. Navigate to the project directory
-```bash
-cd flutter-responsive-web-design
-```
-
-3. Install dependencies
+2. Install dependencies
 ```bash
 flutter pub get
 ```
 
-4. Run the application
+3. Run the application
 ```bash
 flutter run
 ```
