@@ -32,9 +32,6 @@ flutter pub get
 flutter run
 ```
 
-## 📝 License
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
-
 ## 👨‍💻 Author
 **Sumat Dev**
 - GitHub: [@Sumat-Dev](https://github.com/Sumat-Dev)
